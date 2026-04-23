@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Timeline de Proyectos</title>
+
+<style>
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #0f172a;
+    color: #e2e8f0;
+    margin: 0;
+    padding: 40px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.timeline {
+    position: relative;
+    max-width: 800px;
+    margin: auto;
+}
+
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 2px;
+    background-color: #334155;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -1px;
+}
+
+.container {
+    padding: 20px 40px;
+    position: relative;
+    width: 50%;
+}
+
+.container.left {
+    left: 0;
+}
+
+.container.right {
+    left: 50%;
+}
+
+.container::after {
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    right: -8px;
+    background-color: #38bdf8;
+    border: 2px solid #0f172a;
+    top: 25px;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.right::after {
+    left: -8px;
+}
+
+.content {
+    background-color: #1e293b;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.content h3 {
+    margin-top: 0;
+    color: #38bdf8;
+}
+
+.label {
+    font-weight: bold;
+    color: #94a3b8;
+}
+
+@media screen and (max-width: 768px) {
+    .timeline::after {
+        left: 20px;
+    }
+
+    .container {
+        width: 100%;
+        padding-left: 60px;
+        padding-right: 20px;
+    }
+
+    .container.right {
+        left: 0%;
+    }
+
+    .container::after {
+        left: 12px;
+    }
+}
+</style>
+
+</head>
+<body>
+
+<h1>Trayectoria de Proyectos</h1>
+
+<div class="timeline">
+
+    <!-- 2023 -->
+    <div class="container left">
+        <div class="content">
+            <h3>2023</h3>
+            <p><span class="label">Proyecto:</span> Automatización de tableros</p>
+            <p><span class="label">Empresa:</span> INNOVAPUCP</p>
+            <p><span class="label">Periodo:</span> 2023</p>
+            <p><span class="label">Objetivo:</span> Reducir el tiempo de generación de reportes y mejorar la toma de decisiones mediante dashboards automatizados.</p>
+            <p><span class="label">Stack:</span> Power BI, R</p>
+            <p><span class="label">Descripción:</span> Desarrollo de flujos automatizados de transformación y visualización de datos, integrando scripts en R para procesamiento avanzado y actualización dinámica de dashboards.</p>
+        </div>
+    </div>
+
+    <!-- 2024 -->
+    <div class="container right">
+        <div class="content">
+            <h3>2024</h3>
+            <p><span class="label">Proyecto:</span> Programa piloto de solicitudes</p>
+            <p><span class="label">Empresa:</span> INNOVAPUCP</p>
+            <p><span class="label">Periodo:</span> 2024</p>
+            <p><span class="label">Objetivo:</span> Estandarizar y digitalizar la gestión de solicitudes internas.</p>
+            <p><span class="label">Stack:</span> Kissflow</p>
+            <p><span class="label">Descripción:</span> Diseño e implementación de un flujo piloto para centralizar solicitudes, mejorando trazabilidad y reduciendo tiempos de respuesta.</p>
+        </div>
+    </div>
+
+    <div class="container left">
+        <div class="content">
+            <h3>2024</h3>
+            <p><span class="label">Proyecto:</span> Reportería a laboratorios asociados</p>
+            <p><span class="label">Empresa:</span> INNOVAPUCP</p>
+            <p><span class="label">Periodo:</span> 2024</p>
+            <p><span class="label">Objetivo:</span> Proveer visibilidad operativa y comercial a stakeholders externos.</p>
+            <p><span class="label">Stack:</span> Power BI</p>
+            <p><span class="label">Descripción:</span> Creación de dashboards personalizados para laboratorios asociados, facilitando el monitoreo de indicadores clave y desempeño.</p>
+        </div>
+    </div>
+
+    <!-- 2025 -->
+    <div class="container right">
+        <div class="content">
+            <h3>2025</h3>
+            <p><span class="label">Proyecto:</span> Optimización del proceso de encuesta docente</p>
+            <p><span class="label">Empresa:</span> PUCP</p>
+            <p><span class="label">Periodo:</span> 2025</p>
+            <p><span class="label">Objetivo:</span> Mejorar eficiencia y confiabilidad del proceso de encuestas.</p>
+            <p><span class="label">Stack:</span> Kissflow, JavaScript, Python</p>
+            <p><span class="label">Descripción:</span> Automatización de flujos, validaciones y procesamiento de datos, reduciendo errores manuales y optimizando tiempos de ejecución.</p>
+        </div>
+    </div>
+
+    <div class="container left">
+        <div class="content">
+            <h3>2025</h3>
+            <p><span class="label">Proyecto:</span> Control de asistencia</p>
+            <p><span class="label">Empresa:</span> REYCH</p>
+            <p><span class="label">Periodo:</span> 2025</p>
+            <p><span class="label">Objetivo:</span> Digitalizar y monitorear la asistencia del personal.</p>
+            <p><span class="label">Stack:</span> Power Apps, Power BI</p>
+            <p><span class="label">Descripción:</span> Desarrollo de aplicación para registro de asistencia integrada con dashboards analíticos para seguimiento en tiempo real.</p>
+        </div>
+    </div>
+
+    <!-- 2026 -->
+    <div class="container right">
+        <div class="content">
+            <h3>2026</h3>
+            <p><span class="label">Proyecto:</span> Proyecto CONECTA</p>
+            <p><span class="label">Empresa:</span> REYCH</p>
+            <p><span class="label">Periodo:</span> 2026</p>
+            <p><span class="label">Objetivo:</span> Integrar y optimizar procesos comerciales mediante soluciones digitales.</p>
+            <p><span class="label">Stack:</span> Power Platform</p>
+            <p><span class="label">Descripción:</span> Implementación de soluciones integradas para gestión de procesos, centralización de información y mejora en la generación de demanda.</p>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>
