@@ -53,13 +53,12 @@ h1 {
     height: 14px;
     background: linear-gradient(135deg, #38bdf8, #0ea5e9);
     top: 40px;
+    left: 50%;
+    transform: translateX(-50%);
     border-radius: 50%;
     box-shadow: 0 0 12px rgba(56,189,248,0.6);
     z-index: 1;
 }
-
-.left::after { right: -7px; }
-.right::after { left: -7px; }
 
 .card {
     display: flex;
@@ -72,8 +71,8 @@ h1 {
 }
 
 .card img {
-    width: 120px;
-    height: 120px;
+    width: 300px;
+    height: 300px;
     object-fit: cover;
     border-radius: 10px;
     opacity: 0.9;
@@ -119,7 +118,10 @@ h1 {
 }
 
 @media screen and (max-width: 768px) {
-    .timeline::after { left: 20px; }
+    .timeline::after {
+    left: 50%;
+    transform: translateX(-50%);
+    }
 
     .container {
         width: 100%;
@@ -146,7 +148,7 @@ h1 {
 
 <body>
 
-<h1>Transformación de procesos a través de datos</h1>
+<h1> Proyectos de transformación digital y mejora continua </h1>
 
 <div class="timeline">
 
@@ -158,9 +160,9 @@ h1 {
                 <div class="year">2023</div>
                 <div class="title">Automatización de tableros</div>
                 <div class="meta">INNOVAPUCP</div>
-                <div class="impact">Impacto: Reducción en tiempos de generación de reportes y mejora en la toma de decisiones.</div>
+                <div class="impact">Impacto: Reducción de 15 horas semanales en generación de reportes.</div>
                 <div class="desc">
-                    Diseñé e implementé flujos automatizados de transformación y visualización de datos, integrando R para procesamiento avanzado y actualización dinámica.
+                    Diseñé e implementé flujos automatizados de transformación y visualización de datos, integrando R para procesamiento avanzado y actualización dinámica en Power BI.
                 </div>
                 <div class="stack">Power BI · R</div>
             </div>
@@ -175,7 +177,7 @@ h1 {
                 <div class="year">2024</div>
                 <div class="title">Programa piloto de solicitudes</div>
                 <div class="meta">INNOVAPUCP</div>
-                <div class="impact">Impacto: Mejora en trazabilidad y reducción de tiempos de respuesta.</div>
+                <div class="impact">Impacto: Mejora en trazabilidad de más de 300 solicitudes de consultoría. </div>
                 <div class="desc">
                     Implementé un flujo piloto para centralizar solicitudes internas, estandarizando procesos y facilitando su seguimiento.
                 </div>
@@ -203,10 +205,10 @@ h1 {
     <!-- 2025 -->
     <div class="container right">
         <div class="card">
-            <img src="img/JIDOKA.png" alt="">
+            <img src="img/4.png" alt="">
             <div class="text">
                 <div class="year">2025</div>
-                <div class="title">Optimización de encuesta docente</div>
+                <div class="title">Optimización de Encuesta Docente</div>
                 <div class="meta">Pontificia Universidad Católica del Perú</div>
                 <div class="impact">Impacto: Reducción de errores manuales y mejora en eficiencia operativa.</div>
                 <div class="desc">
@@ -241,9 +243,9 @@ h1 {
                 <div class="year">2026</div>
                 <div class="title">Proyecto CONECTA</div>
                 <div class="meta">REYCH</div>
-                <div class="impact">Impacto: Integración de procesos comerciales y mejora en generación de demanda.</div>
+                <div class="impact">Impacto: Integración de datos en una herramienta de fácil uso y ahorro de costos fijos anuales en S/ 40 000.</div>
                 <div class="desc">
-                    Implementé soluciones en Power Platform para centralizar información, optimizar procesos y facilitar la gestión comercial.
+                    Implementé módulos conectados en Power Platform para centralizar información, optimizar procesos y facilitar la gestión de compras.
                 </div>
                 <div class="stack">Power Platform</div>
             </div>
