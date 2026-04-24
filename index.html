@@ -3,12 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Timeline de Proyectos</title>
+<title>Portafolio</title>
 
 <style>
 body {
     font-family: 'Segoe UI', sans-serif;
-    background-color: #0f172a;
+    background-color: #0b1324;
     color: #e2e8f0;
     margin: 0;
     padding: 40px;
@@ -16,12 +16,14 @@ body {
 
 h1 {
     text-align: center;
-    margin-bottom: 50px;
+    margin-bottom: 60px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
 }
 
 .timeline {
     position: relative;
-    max-width: 800px;
+    max-width: 1000px;
     margin: auto;
 }
 
@@ -33,61 +35,91 @@ h1 {
     top: 0;
     bottom: 0;
     left: 50%;
-    margin-left: -1px;
 }
 
 .container {
-    padding: 20px 40px;
+    padding: 30px 40px;
     position: relative;
     width: 50%;
 }
 
-.container.left {
-    left: 0;
-}
-
-.container.right {
-    left: 50%;
-}
+.container.left { left: 0; }
+.container.right { left: 50%; }
 
 .container::after {
     content: '';
     position: absolute;
-    width: 15px;
-    height: 15px;
-    right: -8px;
-    background-color: #38bdf8;
-    border: 2px solid #0f172a;
-    top: 25px;
+    width: 14px;
+    height: 14px;
+    background: linear-gradient(135deg, #38bdf8, #0ea5e9);
+    top: 40px;
     border-radius: 50%;
+    box-shadow: 0 0 12px rgba(56,189,248,0.6);
     z-index: 1;
 }
 
-.right::after {
-    left: -8px;
-}
+.left::after { right: -7px; }
+.right::after { left: -7px; }
 
-.content {
+.card {
+    display: flex;
+    gap: 20px;
     background-color: #1e293b;
-    padding: 20px;
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    align-items: center;
+}
+
+.card img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
     border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    opacity: 0.9;
 }
 
-.content h3 {
-    margin-top: 0;
-    color: #38bdf8;
+.text {
+    flex: 1;
 }
 
-.label {
-    font-weight: bold;
-    color: #94a3b8;
+.year {
+    font-size: 14px;
+    opacity: 0.5;
+    margin-bottom: 5px;
+}
+
+.title {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.meta {
+    font-size: 13px;
+    opacity: 0.6;
+    margin-bottom: 12px;
+}
+
+.impact {
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.desc {
+    font-size: 14px;
+    line-height: 1.6;
+    opacity: 0.85;
+}
+
+.stack {
+    font-size: 12px;
+    opacity: 0.5;
+    margin-top: 10px;
 }
 
 @media screen and (max-width: 768px) {
-    .timeline::after {
-        left: 20px;
-    }
+    .timeline::after { left: 20px; }
 
     .container {
         width: 100%;
@@ -95,96 +127,126 @@ h1 {
         padding-right: 20px;
     }
 
-    .container.right {
-        left: 0%;
+    .container.right { left: 0; }
+
+    .container::after { left: 12px; }
+
+    .card {
+        flex-direction: column;
+        align-items: flex-start;
     }
 
-    .container::after {
-        left: 12px;
+    .card img {
+        width: 100%;
+        height: auto;
     }
 }
 </style>
-
 </head>
+
 <body>
 
-<h1>Trayectoria de Proyectos</h1>
+<h1>Transformación de procesos a través de datos</h1>
 
 <div class="timeline">
 
     <!-- 2023 -->
     <div class="container left">
-        <div class="content">
-            <h3>2023</h3>
-            <p><span class="label">Proyecto:</span> Automatización de tableros</p>
-            <p><span class="label">Empresa:</span> INNOVAPUCP</p>
-            <p><span class="label">Periodo:</span> 2023</p>
-            <p><span class="label">Objetivo:</span> Reducir el tiempo de generación de reportes y mejorar la toma de decisiones mediante dashboards automatizados.</p>
-            <p><span class="label">Stack:</span> Power BI, R</p>
-            <p><span class="label">Descripción:</span> Desarrollo de flujos automatizados de transformación y visualización de datos, integrando scripts en R para procesamiento avanzado y actualización dinámica de dashboards.</p>
+        <div class="card">
+            <img src="img/JIDOKA.png" alt="">
+            <div class="text">
+                <div class="year">2023</div>
+                <div class="title">Automatización de tableros</div>
+                <div class="meta">INNOVAPUCP</div>
+                <div class="impact">Impacto: Reducción en tiempos de generación de reportes y mejora en la toma de decisiones.</div>
+                <div class="desc">
+                    Diseñé e implementé flujos automatizados de transformación y visualización de datos, integrando R para procesamiento avanzado y actualización dinámica.
+                </div>
+                <div class="stack">Power BI · R</div>
+            </div>
         </div>
     </div>
 
     <!-- 2024 -->
     <div class="container right">
-        <div class="content">
-            <h3>2024</h3>
-            <p><span class="label">Proyecto:</span> Programa piloto de solicitudes</p>
-            <p><span class="label">Empresa:</span> INNOVAPUCP</p>
-            <p><span class="label">Periodo:</span> 2024</p>
-            <p><span class="label">Objetivo:</span> Estandarizar y digitalizar la gestión de solicitudes internas.</p>
-            <p><span class="label">Stack:</span> Kissflow</p>
-            <p><span class="label">Descripción:</span> Diseño e implementación de un flujo piloto para centralizar solicitudes, mejorando trazabilidad y reduciendo tiempos de respuesta.</p>
+        <div class="card">
+            <img src="img/JIDOKA.png" alt="">
+            <div class="text">
+                <div class="year">2024</div>
+                <div class="title">Programa piloto de solicitudes</div>
+                <div class="meta">INNOVAPUCP</div>
+                <div class="impact">Impacto: Mejora en trazabilidad y reducción de tiempos de respuesta.</div>
+                <div class="desc">
+                    Implementé un flujo piloto para centralizar solicitudes internas, estandarizando procesos y facilitando su seguimiento.
+                </div>
+                <div class="stack">Kissflow</div>
+            </div>
         </div>
     </div>
 
     <div class="container left">
-        <div class="content">
-            <h3>2024</h3>
-            <p><span class="label">Proyecto:</span> Reportería a laboratorios asociados</p>
-            <p><span class="label">Empresa:</span> INNOVAPUCP</p>
-            <p><span class="label">Periodo:</span> 2024</p>
-            <p><span class="label">Objetivo:</span> Proveer visibilidad operativa y comercial a stakeholders externos.</p>
-            <p><span class="label">Stack:</span> Power BI</p>
-            <p><span class="label">Descripción:</span> Creación de dashboards personalizados para laboratorios asociados, facilitando el monitoreo de indicadores clave y desempeño.</p>
+        <div class="card">
+            <img src="img/JIDOKA.png" alt="">
+            <div class="text">
+                <div class="year">2024</div>
+                <div class="title">Reportería a laboratorios asociados</div>
+                <div class="meta">INNOVAPUCP</div>
+                <div class="impact">Impacto: Mayor visibilidad operativa y comercial para stakeholders.</div>
+                <div class="desc">
+                    Desarrollé dashboards personalizados que permitieron monitorear indicadores clave y desempeño de forma autónoma.
+                </div>
+                <div class="stack">Power BI</div>
+            </div>
         </div>
     </div>
 
     <!-- 2025 -->
     <div class="container right">
-        <div class="content">
-            <h3>2025</h3>
-            <p><span class="label">Proyecto:</span> Optimización del proceso de encuesta docente</p>
-            <p><span class="label">Empresa:</span> PUCP</p>
-            <p><span class="label">Periodo:</span> 2025</p>
-            <p><span class="label">Objetivo:</span> Mejorar eficiencia y confiabilidad del proceso de encuestas.</p>
-            <p><span class="label">Stack:</span> Kissflow, JavaScript, Python</p>
-            <p><span class="label">Descripción:</span> Automatización de flujos, validaciones y procesamiento de datos, reduciendo errores manuales y optimizando tiempos de ejecución.</p>
+        <div class="card">
+            <img src="img/JIDOKA.png" alt="">
+            <div class="text">
+                <div class="year">2025</div>
+                <div class="title">Optimización de encuesta docente</div>
+                <div class="meta">Pontificia Universidad Católica del Perú</div>
+                <div class="impact">Impacto: Reducción de errores manuales y mejora en eficiencia operativa.</div>
+                <div class="desc">
+                    Automaticé flujos, validaciones y procesamiento de datos, integrando múltiples tecnologías para asegurar consistencia y escalabilidad.
+                </div>
+                <div class="stack">Kissflow · JavaScript · Python</div>
+            </div>
         </div>
     </div>
 
     <div class="container left">
-        <div class="content">
-            <h3>2025</h3>
-            <p><span class="label">Proyecto:</span> Control de asistencia</p>
-            <p><span class="label">Empresa:</span> REYCH</p>
-            <p><span class="label">Periodo:</span> 2025</p>
-            <p><span class="label">Objetivo:</span> Digitalizar y monitorear la asistencia del personal.</p>
-            <p><span class="label">Stack:</span> Power Apps, Power BI</p>
-            <p><span class="label">Descripción:</span> Desarrollo de aplicación para registro de asistencia integrada con dashboards analíticos para seguimiento en tiempo real.</p>
+        <div class="card">
+            <img src="img/JIDOKA.png" alt="">
+            <div class="text">
+                <div class="year">2025</div>
+                <div class="title">Control de asistencia</div>
+                <div class="meta">REYCH</div>
+                <div class="impact">Impacto: Digitalización del control operativo y monitoreo en tiempo real.</div>
+                <div class="desc">
+                    Desarrollé una aplicación para registro de asistencia integrada con dashboards analíticos para seguimiento continuo.
+                </div>
+                <div class="stack">Power Apps · Power BI</div>
+            </div>
         </div>
     </div>
 
     <!-- 2026 -->
     <div class="container right">
-        <div class="content">
-            <h3>2026</h3>
-            <p><span class="label">Proyecto:</span> Proyecto CONECTA</p>
-            <p><span class="label">Empresa:</span> REYCH</p>
-            <p><span class="label">Periodo:</span> 2026</p>
-            <p><span class="label">Objetivo:</span> Integrar y optimizar procesos comerciales mediante soluciones digitales.</p>
-            <p><span class="label">Stack:</span> Power Platform</p>
-            <p><span class="label">Descripción:</span> Implementación de soluciones integradas para gestión de procesos, centralización de información y mejora en la generación de demanda.</p>
+        <div class="card">
+            <img src="img/JIDOKA.png" alt="">
+            <div class="text">
+                <div class="year">2026</div>
+                <div class="title">Proyecto CONECTA</div>
+                <div class="meta">REYCH</div>
+                <div class="impact">Impacto: Integración de procesos comerciales y mejora en generación de demanda.</div>
+                <div class="desc">
+                    Implementé soluciones en Power Platform para centralizar información, optimizar procesos y facilitar la gestión comercial.
+                </div>
+                <div class="stack">Power Platform</div>
+            </div>
         </div>
     </div>
 
